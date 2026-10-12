@@ -36,9 +36,11 @@ resource "azurerm_role_assignment" "me_secrets_officer" {
 }
 
 resource "azurerm_key_vault_secret" "demo" {
-  name         = "demo-secret"
-  value        = "not-a-real-secret"
-  key_vault_id = azurerm_key_vault.main.id
+  name            = "demo-secret"
+  value           = "not-a-real-secret"
+  key_vault_id    = azurerm_key_vault.main.id
+  content_type    = "text/plain"
+  expiration_date = "2027-01-01T00:00:00Z"
 
   depends_on = [azurerm_role_assignment.me_secrets_officer]
 }
