@@ -13,7 +13,7 @@ terraform {
   backend "azurerm" {
     resource_group_name = "rg-tfstate"
     storage_account_name = "sttfstate25790"
-    container_name = "tfstate"
+       container_name = "tfstate"
     key = "dev.terraform.tfstate"
   }
 }
@@ -27,8 +27,8 @@ provider "azurerm" {
 }
 
 locals {
-  common_tags = {
-    environment = var.environment
+common_tags = {
+  environment = var.environment
     managed_by  = "terraform"
   }
 }
