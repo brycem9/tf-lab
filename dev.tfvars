@@ -1,4 +1,4 @@
 #VARILABLE VALUES
 
 environment = "dev"
-location = "eastus"
+location    = "eastus"

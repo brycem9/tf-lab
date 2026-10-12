@@ -1,5 +1,5 @@
 output "resource_group_id" {
-    value = azurerm_resource_group.main.id
+  value = azurerm_resource_group.main.id
 }
 
 output "storage_account_name" {
